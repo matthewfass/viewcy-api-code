@@ -1,0 +1,51 @@
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f2f2f2;
+}
+
+.card {
+	max-width: 600px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+	width: 100%;
+	height: auto;
+}
+
+.card-title {
+	margin-top: 10px;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.card-description {
+	margin-top: 10px;
+}
+
+.card-link {
+	margin-top: 10px;
+	text-decoration: none;
+	color: #007bff;
+}
+
+/* Add general button styles */
+.button {
+	display: inline-block;
+	padding: 8px 16px;
+	background-color: #D50C52;
+	color: white;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+/* Add hover effect */
+.button:hover {
+	background-color: #b10441;
+}
