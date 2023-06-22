@@ -29,11 +29,17 @@
             card.style = "background-color: white; margin-bottom: 20px; padding:20px; border-radius: 20px;"
             card.classList.add("card");
 
+            // Create an anchor element for the image
+            const imageLink = document.createElement("a");
+            imageLink.href = item.events[0].book_url;
+            imageLink.target = "_blank"; // Open link in a new tab
+            card.appendChild(imageLink);
+
             // Create an image element
             const image = document.createElement("img");
             image.src = item.featured_image;
             image.style = "border-radius: 20px;"
-            card.appendChild(image);
+            imageLink.appendChild(image); // Append the image to the anchor element
 
             // Create a title element
             const title = document.createElement("h2");
