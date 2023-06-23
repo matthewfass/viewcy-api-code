@@ -49,3 +49,9 @@
 .button:hover {
 	background-color: #b10441;
 }
+
+#app a {
+	display: block;
+	word-wrap: break-word;
+}
+

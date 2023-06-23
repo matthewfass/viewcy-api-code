@@ -6,6 +6,7 @@
 </style>
 
 <div id="app" style="color: black; min-height: 20vh;"></div>
+
 <script>
     let data;
 
@@ -70,6 +71,14 @@
             ticketButton.target = "_blank"; // Open link in a new tab
             card.appendChild(ticketButton);
 
+            // Split the description into paragraphs
+            let paragraphs = item.description.split('DETAILS');
+
+            // Create a short description element
+            const shortDescription = document.createElement("div");
+            shortDescription.innerHTML = paragraphs[0]; // Grab the first paragraph
+            card.appendChild(shortDescription);
+
             // Create a show/hide button
             const toggleButton = document.createElement("div");
             toggleButton.textContent = "More";
@@ -88,10 +97,10 @@
             space1.innerHTML = `<br>`;
             details.appendChild(space1);
 
-            // Create a description element
-            const description = document.createElement("div");
-            description.innerHTML = item.description;
-            details.appendChild(description);
+            // Create a full description element
+            const fullDescription = document.createElement("div");
+            fullDescription.innerHTML = paragraphs.slice(1).join('<br>'); // Include all but the first paragraph
+            details.appendChild(fullDescription);
 
             // Create a space element
             const space2 = document.createElement("div");
